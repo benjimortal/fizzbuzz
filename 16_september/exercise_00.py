@@ -6,6 +6,8 @@ LEFT = 180
 DOWN = 270
 
 
+
+
 def draw_pole(turtle):
     turtle.penup()
     turtle.goto(-200, -300)
