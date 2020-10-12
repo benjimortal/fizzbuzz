@@ -83,7 +83,6 @@ class Ball:
         if not self.radius <= self.y <= SCREEN_HEIGHT - self.radius:
             self.y_step *= -1
 
-
     def draw(self):
         pygame.draw.circle(self.screen, self.color, (self.x, self.y), self.radius)
 

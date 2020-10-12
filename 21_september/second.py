@@ -19,7 +19,7 @@ class Rect:
         self.color = color
         self.screen = screen
 
-    @property
+
     def top(self):
         return self.y
 
