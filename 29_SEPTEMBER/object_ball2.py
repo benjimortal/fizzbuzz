@@ -139,7 +139,7 @@ def main():
             #    flytta bollen i nuvarande x_step och y_step tills bollen är ute ur rutan
 
 
-        ball.show_next_hit()
+        #ball.show_next_hit()
         #pygame.draw.rect(screen, BLUE, (SCREEN_WIDTH//2-50, SCREEN_HEIGHT//2 - 50, 100, 100))
         blue_rect.draw()
         pygame.display.update()

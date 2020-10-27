@@ -139,7 +139,7 @@ def main():
 
         # ball.show_next_hit()
         #pygame.draw.rect(screen, BLUE, (SCREEN_WIDTH//2-50, SCREEN_HEIGHT//2 - 50, 100, 100))
-        blue_rect.draw()
+        #blue_rect.draw()
         pygame.display.update()
         clock.tick(120)
 

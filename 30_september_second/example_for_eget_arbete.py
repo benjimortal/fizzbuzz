@@ -31,7 +31,7 @@ class Ball:
 
     def move(self):
         self.x += self.x_step
-        self.y += self.y_step
+
 
         if self.x < 0 + self.radius:
             self.x_step = 1
@@ -52,7 +52,7 @@ def main():
 
     running = True
 
-    ball = Ball(400, 300, -1, 1, (255, 0, 0), 20)
+    ball = Ball(370, 520, -1, 1, (255, 0, 0), 20)
     clock = pygame.time.Clock()
     box = pygame.Rect(400, 400, 100, 100)
 

@@ -95,7 +95,7 @@ def main():
 
     running = True
 
-    ball = Ball(400, 300, -1, 1, GREEN, 20)
+    ball = Ball(400, 300, -1, 1, GREEN, 20, screen)
     clock = pygame.time.Clock()
     box = pygame.Rect(200, 200, 100, 100)
 

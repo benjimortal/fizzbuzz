@@ -6,12 +6,18 @@ BLACK = (0, 0, 0)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
+PINK = (255, 192, 203)
+WHEAT = (245, 222, 179)
+LAVENDER = (230, 230, 250)
+ALICEBLUE = (240, 248, 255)
+SNOW = (255, 250, 250)
+
 
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 
 
-class Rect:
+"""class Rect:
     def __init__(self, x, y, width, height, color, screen):
         self.x = x
         self.y = y
@@ -41,7 +47,7 @@ class Rect:
             return False
         if self.top() >= other.bottom() or other.top() >= self.bottom():
             return False
-        return True
+        return True"""
 
 
 class Ball:
@@ -55,7 +61,7 @@ class Ball:
         self.screen = screen
 
     def move(self):
-        self.x += self.x_step
+        #self.x += self.x_step
         self.y += self.y_step
 
         if not self.radius <= self.x <= SCREEN_WIDTH - self.radius:
@@ -74,12 +80,12 @@ class Ball:
 def main():
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    blue_rect = Rect(SCREEN_WIDTH // 2 - 50, SCREEN_HEIGHT // 2 - 50, 100, 100, BLUE, screen)
+    #blue_rect = Rect(SCREEN_WIDTH // 2 - 50, SCREEN_HEIGHT // 2 - 50, 100, 100, BLUE, screen)
 
-    colors = [WHITE, RED, GREEN, BLUE]
+    colors = [RED, GREEN, BLUE, SNOW, ALICEBLUE,LAVENDER, WHEAT, PINK ]
 
     balls = []
-    for _ in range(10):
+    for _ in range(20):
         x = random.randrange(10, SCREEN_WIDTH-20)
         y = random.randrange(10, SCREEN_HEIGHT-10)
         x_step = random.choice([-3, -2, -1, 0, 1, 2, 3])
@@ -96,16 +102,16 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
 
-        if event.type == pygame.MOUSEMOTION:
+        """if event.type == pygame.MOUSEMOTION:
             mouse_x, mouse_y = pygame.mouse.get_pos()
             blue_rect.x = mouse_x
-            blue_rect.y = mouse_y
+            blue_rect.y = mouse_y"""
 
         screen.fill(BLACK)
         for ball in balls:
             ball.move()
             ball.draw()
-        blue_rect.draw()
+        #blue_rect.draw()
         pygame.display.update()
         clock.tick(60)
 

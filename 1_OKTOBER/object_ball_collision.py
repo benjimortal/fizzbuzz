@@ -62,13 +62,13 @@ def main():
 
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
-                    red_rect.x -= 10
+                    red_rect.x -= 40
                 if event.key == pygame.K_RIGHT:
-                    red_rect.x += 10
+                    red_rect.x += 40
                 if event.key == pygame.K_UP:
-                    red_rect.y -= 10
+                    red_rect.y -= 40
                 if event.key == pygame.K_DOWN:
-                    red_rect.y += 10
+                    red_rect.y += 40
 
 
         screen.fill(BLACK)
