@@ -53,10 +53,10 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
 
-        screen.blit(background_image, [0, 0])
-        ball.draw()
-        ball.move()
-        pygame.display.update()
+    screen.blit(background_image, [0, 0])
+    ball.draw()
+    ball.move()
+    pygame.display.update()
 
 
 if __name__ == '__main__':

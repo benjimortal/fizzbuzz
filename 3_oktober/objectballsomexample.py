@@ -20,21 +20,7 @@ class Rect:
         self.color = color
         self.screen = screen
 
-    @property
-    def top(self):
-        return self.y
 
-    @property
-    def bottom(self):
-        return self.y + self.height
-
-    @property
-    def left(self):
-        return self.x
-
-    @property
-    def right(self):
-        return self.x + self.width
 
     def draw(self):
         pygame.draw.rect(self.screen, self.color, (self.x, self.y, self.width, self.height), 3)
